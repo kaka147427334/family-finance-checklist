@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0F6E56">
+<title>家庭理财行动清单 · 昊哥</title>
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;padding:0;background:#f5f6f4;color:#1d1d1b;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;font-size:15px;line-height:1.65}
+.wrap{max-width:680px;margin:0 auto;padding:0 16px 60px}
+header{background:#0F6E56;color:#fff;padding:26px 20px 20px;margin:0 -16px 0}
+header .inner{max-width:648px;margin:0 auto}
+h1{font-size:20px;font-weight:600;margin:0 0 4px}
+.sub{font-size:13px;opacity:.82;margin:0}
+.progress-card{background:#fff;border-radius:14px;padding:16px;margin-top:-28px;position:relative;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.progress-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+.progress-top span:first-child{font-size:13px;color:#6b6b66}
+.pct{font-size:22px;font-weight:600;color:#0F6E56}
+.bar{height:8px;background:#eceae4;border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:#0F6E56;border-radius:4px;transition:width .35s ease}
+.stat-row{display:flex;gap:10px;margin-top:14px}
+.stat{flex:1;background:#f5f6f4;border-radius:10px;padding:10px 8px;text-align:center}
+.stat b{display:block;font-size:14px;font-weight:600;color:#1d1d1b}
+.stat small{display:block;font-size:11px;color:#8a8a83;margin-top:2px}
+section{margin-top:26px}
+.sec-head{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.sec-head h2{font-size:16px;font-weight:600;margin:0}
+.badge{font-size:11px;padding:2px 8px;border-radius:20px;font-weight:500}
+.b0{background:#FCEBEB;color:#A32D2D}
+.b1{background:#FAEEDA;color:#854F0B}
+.b2{background:#E6F1FB;color:#185FA5}
+.b3{background:#E1F5EE;color:#0F6E56}
+.item{background:#fff;border-radius:12px;padding:14px 14px 14px 12px;margin-bottom:10px;display:flex;gap:12px;align-items:flex-start;transition:opacity .2s}
+.item.done{opacity:.55}
+.check{flex-shrink:0;width:22px;height:22px;border:2px solid #c9c7c0;border-radius:50%;margin-top:2px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .18s}
+.item.done .check{background:#0F6E56;border-color:#0F6E56}
+.check svg{width:12px;height:12px;opacity:0;transition:opacity .18s}
+.item.done .check svg{opacity:1}
+.body{flex:1;min-width:0}
+.title{font-size:15px;font-weight:500;margin:0 0 3px}
+.item.done .title{text-decoration:line-through;text-decoration-color:#0F6E56}
+.desc{font-size:13px;color:#6b6b66;margin:0}
+.tag{display:inline-block;font-size:11px;background:#f0f2ee;color:#5f5e5a;padding:1px 7px;border-radius:4px;margin-top:6px}
+.tag.money{background:#E1F5EE;color:#0F6E56}
+.note{background:#fff;border-left:3px solid #1D9E75;border-radius:8px;padding:12px 14px;font-size:13px;color:#4a4a45;margin-bottom:10px}
+h3{font-size:14px;font-weight:600;margin:18px 0 8px;color:#0F6E56}
+footer{margin-top:34px;padding-top:16px;border-top:1px solid #e5e4e0;font-size:12px;color:#8a8a83;line-height:1.7}
+.reset{display:block;margin:20px auto 0;background:none;border:1px solid #d8d6d0;color:#8a8a83;font-size:12px;padding:7px 16px;border-radius:20px}
+</style>
+</head>
+<body>
+<header><div class="inner">
+<h1>家庭理财行动清单</h1>
+<p class="sub">昊哥 · 2026 年 11 月版 · 做完一件点一下，进度自动保存</p>
+</div></header>
+
+<div class="wrap">
+<div class="progress-card">
+  <div class="progress-top"><span>整体进度</span><span class="pct" id="pct">0%</span></div>
+  <div class="bar"><i id="barfill"></i></div>
+  <div class="stat-row">
+    <div class="stat"><b id="s-done">0</b><small>已完成</small></div>
+    <div class="stat"><b id="s-left">0</b><small>待执行</small></div>
+    <div class="stat"><b>≤26万</b><small>TSLA 目标仓位</small></div>
+  </div>
+</div>
+
+<section>
+<div class="sec-head"><h2>本周必做</h2><span class="badge b0">P0</span></div>
+
+<div class="item" data-id="p0-1"><div class="check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6.2L4.8 9L10 3.2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="body"><p class="title">65 万活期搬家</p><p class="desc">15 万放货币基金（随时可取）+ 50 万转 1 年期大额存单或 R2 短债。这是全书性价比最高的动作。</p><span class="tag money">年增收约 1.2-1.5 万</span></div></div>
+
+<div class="item" data-id="p0-2"><div class="check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6.2L4.8 9L10 3.2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="body"><p class="title">TSLA 账户 W-8BEN 重新认证</p><p class="desc">在券商 App 里点掉，约 2 分钟。不处理会影响交易和预扣税率。</p></div></div>
+
+<div class="item" data-id="p0-3"><div class="check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6.2L4.8 9L10 3.2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="body"><p class="title">核对个税专项附加扣除</p><p class="desc">子女教育 2,000/月、房贷利息 1,000/月、赡养老人 3,000/月（如父母满 60 岁且为独生子女）。打开个税 App 逐项看是否已填。</p><span class="tag money">最高年省税约 9,600 元</span></div></div>
+
+<div class="item done" data-id="p0-4"><div class="check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6.2L4.8 9L10 3.2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="body"><p class="title">个人养老金账户已缴存并抵扣</p><p class="desc">2026 年 1.2 万已足额缴存、已申报抵扣。维持缴存即可。可在光大看看账户内资金投向，考虑换成养老目标基金 Y 份额。</p><span class="tag">已确认</span></div></div>
+</section>
+
+<section>
+<div class="sec-head"><h2>本月执行</h2><span class="badge b1">P1</span></div>
+
+<div class="item" data-id="p1-1"><div class="check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6.2L4.8 9L10 3.2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="body"><p class="title">定寿 300 万报价对比（至少 3 家）</p><p class="desc">保额 = 房贷 125 万 + 教育金 50 万 + 5 年家庭开销。保至 60 岁，缴费期 20-30 年。</p><span class="tag money">预算 4,000-6,000 元/年</span></div></div>
+
+<div class="item" data-id="p1-2"><div class="check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6.2L4.8 9L10 3.2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="body"><p class="title">夫妻重疾险各 50 万（消费型定期）</p><p class="desc">保至 70 岁，别买返还型、别买分红型，就买纯保障。</p><span class="tag money">合计约 1.5-2.5 万/年</span></div></div>
+
+<div class="item" data-id="p1-3"><div class="check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6.2L4.8 9L10 3.2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="body"><p class="title">百万医疗险 + 孩子意外险</p><p class="desc">一家三口配齐，几百块买几十万住院报销额度，解决大额医疗风险。</p><span class="tag money">约 2,000 元/年</span></div></div>
+
+<div class="item" data-id="p1-4"><div class="check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6.2L4.8 9L10 3.2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="body"><p class="title">TSLA 第一批减持 8-10 万</p><p class="desc">目标是 3-4 批把仓位从 55.8 万降到 26 万以内。不择时，到月就卖。卖出资金先放货币基金待建仓。</p><span class="tag">单票上限 10%</span></div></div>
+
+<div class="item" data-id="p1-5"><div class="check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6.2L4.8 9L10 3.2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="body"><p class="title">蔚来股票清仓</p><p class="desc">约 8 万。和 TSLA 一起构成对新能源车行业的双重押注，而你本人就在这个行业工作。</p></div></div>
+
+<div class="item" data-id="p1-6"><div class="check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6.2L4.8 9L10 3.2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="body"><p class="title">支付宝清理：3 笔赎回</p><p class="desc">①「帮你投·百分百进攻」清仓（−16.66%，还收双重费）②「帮你投·活钱+」赎回转货基 ③招商鑫诚C、兴业恒悦C 到期并入中短债 A。</p><span class="tag money">年省费用 3,000-5,000 元</span></div></div>
+
+<div class="item" data-id="p1-7"><div class="check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6.2L4.8 9L10 3.2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="body"><p class="title">开教育金专户 + 每月 5,000 定投</p><p class="desc">独立账户、物理隔离，红利低波 + 短债组合，2033 年 6 月目标约 40 万。任何情况不挪用。</p><span class="tag">7 年后到 40 万</span></div></div>
+
+<div class="item" data-id="p1-8"><div class="check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6.2L4.8 9L10 3.2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="body"><p class="title">建立宽基底仓（用 TSLA 变现资金）</p><p class="desc">沪深300 + 红利低波 + 标普500（QDII）三只，费率控制 0.5% 以内，分 6-12 个月定投建仓，不要一次买完。</p><span class="tag">权益目标 30%</span></div></div>
+</section>
+
+<section>
+<div class="sec-head"><h2>季度与年度</h2><span class="badge b2">P2</span></div>
+
+<div class="item" data-id="p2-1"><div class="check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6.2L4.8 9L10 3.2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="body"><p class="title">固收精简：12 只 → 7 只以内</p><p class="desc">目标结构：活钱池 1 只（15 万）+ 核心中短债 1 只（55 万）+ 1 年阶梯 1 只（40 万）。</p></div></div>
+
+<div class="item" data-id="p2-2"><div class="check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6.2L4.8 9L10 3.2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="body"><p class="title">2027 / 2028 储蓄险各缴 6 万</p><p class="desc">中银三星尊享人生二号，缴完 5 期共 30 万，持有到 2034 年（现价约 39.9 万，零波动确定性资产）。中途急用钱做保单贷款，别退保。</p><span class="tag">2034 年到 39.9 万</span></div></div>
+
+<div class="item" data-id="p2-3"><div class="check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6.2L4.8 9L10 3.2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="body"><p class="title">12 月：年终奖税务测算</p><p class="desc">拿到零跑年终奖数字后，比较「并入综合所得」与「单独计税」，通常单独计税更优，差别可能上万。</p></div></div>
+
+<div class="item" data-id="p2-4"><div class="check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6.2L4.8 9L10 3.2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="body"><p class="title">2027 Q1：首次季度组合复盘</p><p class="desc">看比例偏离是否超过 5%（超了就再平衡）、看定投是否执行、看单票是否仍超标。</p></div></div>
+
+<div class="item" data-id="p2-5"><div class="check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6.2L4.8 9L10 3.2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="body"><p class="title">2031 年：退休决策复查</p><p class="desc">正式评估 42 岁提前退休是否可行（届时净资产若超 380 万可提前）。这是长期提醒，先记在这儿。</p><span class="tag">2031 年窗口</span></div></div>
+</section>
+
+<div class="note">
+<b>核心逻辑一句话：</b>你的问题不是赚得不够，是 265 万里的钱分散在 12 个产品、2 个平台、1 个高度集中的行业上。这次执行的目的只有一个——<b>让钱各就各位</b>。
+</div>
+
+<footer>
+本清单基于 2026-11-11 家庭财务规划书 v1.2 生成，仅为个人参考，不构成投资建议。保险与税务的具体条款、核保结果、计税方式请以产品和官方口径为准，重大决策建议咨询持证理财顾问、税务师。<br><br>
+勾选状态保存在本机浏览器，换设备或清理缓存会重置。
+</footer>
+<button class="reset" onclick="if(confirm('确定清空所有勾选记录？')){localStorage.removeItem('wm_checklist_2026');location.reload()}">清空进度</button>
+</div>
+
+<script>
+(function(){
+  var KEY='wm_checklist_2026';
+  var state={};
+  try{state=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){state={}}
+  var items=[].slice.call(document.querySelectorAll('.item'));
+  function render(){
+    var done=0;
+    items.forEach(function(el){
+      var id=el.getAttribute('data-id');
+      if(state[id]){el.classList.add('done');done++}else{el.classList.remove('done')}
+    });
+    var total=items.length,pct=Math.round(done/total*100);
+    document.getElementById('pct').textContent=pct+'%';
+    document.getElementById('barfill').style.width=pct+'%';
+    document.getElementById('s-done').textContent=done;
+    document.getElementById('s-left').textContent=total-done;
+  }
+  items.forEach(function(el){
+    el.addEventListener('click',function(){
+      var id=el.getAttribute('data-id');
+      state[id]=!state[id];
+      try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}
+      render();
+    });
+  });
+  render();
+})();
+</script>
+</body>
+</html>
